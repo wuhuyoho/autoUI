@@ -1,0 +1,87 @@
+{
+  "uid" : "f28044a35589fe33",
+  "name" : "test_新建项目功能验证[data0]",
+  "fullName" : "test_cases_actuator.test_cases_actuator.TestCase#test_新建项目功能验证",
+  "historyId" : "1ff1305a03f154c0bd4256242e0a4a63",
+  "time" : {
+    "start" : 1747741747330,
+    "stop" : 1747741747330,
+    "duration" : 0
+  },
+  "description" : "新建项目流程功能",
+  "descriptionHtml" : "<p>新建项目流程功能</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location",
+  "statusTrace" : "self = <selenium.webdriver.common.driver_finder.DriverFinder object at 0x0000020C01519910>\n\n    def _binary_paths(self) -> dict:\n        if self._paths[\"driver_path\"]:\n            return self._paths\n    \n        browser = self._options.capabilities[\"browserName\"]\n        try:\n            path = self._service.path\n            if path:\n                logger.debug(\n                    \"Skipping Selenium Manager; path to %s driver specified in Service class: %s\", browser, path\n                )\n                if not Path(path).is_file():\n                    raise ValueError(f\"The path is not a valid file: {path}\")\n                self._paths[\"driver_path\"] = path\n            else:\n                output = SeleniumManager().binary_paths(self._to_args())\n                if Path(output[\"driver_path\"]).is_file():\n                    self._paths[\"driver_path\"] = output[\"driver_path\"]\n                else:\n                    raise ValueError(f'The driver path is not a valid file: {output[\"driver_path\"]}')\n                if Path(output[\"browser_path\"]).is_file():\n                    self._paths[\"browser_path\"] = output[\"browser_path\"]\n                else:\n>                   raise ValueError(f'The browser path is not a valid file: {output[\"browser_path\"]}')\nE                   ValueError: The browser path is not a valid file:\n\nmyenv\\Lib\\site-packages\\selenium\\webdriver\\common\\driver_finder.py:75: ValueError\n\nThe above exception was the direct cause of the following exception:\n\n>   ???\n\nE:\\ui_framework\\test_cases_actuator\\conftest.py:99: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nmyenv\\Lib\\site-packages\\selenium\\webdriver\\chrome\\webdriver.py:45: in __init__\n    super().__init__(\nmyenv\\Lib\\site-packages\\selenium\\webdriver\\chromium\\webdriver.py:50: in __init__\n    if finder.get_browser_path():\nmyenv\\Lib\\site-packages\\selenium\\webdriver\\common\\driver_finder.py:47: in get_browser_path\n    return self._binary_paths()[\"browser_path\"]\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.common.driver_finder.DriverFinder object at 0x0000020C01519910>\n\n    def _binary_paths(self) -> dict:\n        if self._paths[\"driver_path\"]:\n            return self._paths\n    \n        browser = self._options.capabilities[\"browserName\"]\n        try:\n            path = self._service.path\n            if path:\n                logger.debug(\n                    \"Skipping Selenium Manager; path to %s driver specified in Service class: %s\", browser, path\n                )\n                if not Path(path).is_file():\n                    raise ValueError(f\"The path is not a valid file: {path}\")\n                self._paths[\"driver_path\"] = path\n            else:\n                output = SeleniumManager().binary_paths(self._to_args())\n                if Path(output[\"driver_path\"]).is_file():\n                    self._paths[\"driver_path\"] = output[\"driver_path\"]\n                else:\n                    raise ValueError(f'The driver path is not a valid file: {output[\"driver_path\"]}')\n                if Path(output[\"browser_path\"]).is_file():\n                    self._paths[\"browser_path\"] = output[\"browser_path\"]\n                else:\n                    raise ValueError(f'The browser path is not a valid file: {output[\"browser_path\"]}')\n        except Exception as err:\n            msg = f\"Unable to obtain driver for {browser}\"\n>           raise NoSuchDriverException(msg) from err\nE           selenium.common.exceptions.NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location\n\nmyenv\\Lib\\site-packages\\selenium\\webdriver\\common\\driver_finder.py:78: NoSuchDriverException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1747741745836,
+      "stop" : 1747741747151,
+      "duration" : 1315
+    },
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location\n\n",
+    "statusTrace" : "  File \"D:\\Desktop\\autoUI\\ui_framework\\myenv\\Lib\\site-packages\\pluggy\\_callers.py\", line 167, in _multicall\n    teardown.throw(outcome._exception)\n  File \"D:\\Desktop\\autoUI\\ui_framework\\myenv\\Lib\\site-packages\\_pytest\\setuponly.py\", line 36, in pytest_fixture_setup\n    return (yield)\n            ^^^^^\n  File \"D:\\Desktop\\autoUI\\ui_framework\\myenv\\Lib\\site-packages\\pluggy\\_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Desktop\\autoUI\\ui_framework\\myenv\\Lib\\site-packages\\_pytest\\fixtures.py\", line 1140, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Desktop\\autoUI\\ui_framework\\myenv\\Lib\\site-packages\\_pytest\\fixtures.py\", line 891, in call_fixture_func\n    fixture_result = next(generator)\n                     ^^^^^^^^^^^^^^^\n  File \"E:\\ui_framework\\test_cases_actuator\\conftest.py\", line 99, in driver\n  File \"D:\\Desktop\\autoUI\\ui_framework\\myenv\\Lib\\site-packages\\selenium\\webdriver\\chrome\\webdriver.py\", line 45, in __init__\n    super().__init__(\n  File \"D:\\Desktop\\autoUI\\ui_framework\\myenv\\Lib\\site-packages\\selenium\\webdriver\\chromium\\webdriver.py\", line 50, in __init__\n    if finder.get_browser_path():\n       ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Desktop\\autoUI\\ui_framework\\myenv\\Lib\\site-packages\\selenium\\webdriver\\common\\driver_finder.py\", line 47, in get_browser_path\n    return self._binary_paths()[\"browser_path\"]\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Desktop\\autoUI\\ui_framework\\myenv\\Lib\\site-packages\\selenium\\webdriver\\common\\driver_finder.py\", line 78, in _binary_paths\n    raise NoSuchDriverException(msg) from err\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0,
+    "hasContent" : true,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "项目"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_cases_actuator"
+  }, {
+    "name" : "suite",
+    "value" : "test_cases_actuator"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCase"
+  }, {
+    "name" : "host",
+    "value" : "Marlatinda"
+  }, {
+    "name" : "thread",
+    "value" : "22612-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_cases_actuator.test_cases_actuator"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'用例名称': '新建项目功能验证', '用例步骤': {'进入项目模块': {'点击': {'元素对象': '//*[@id=\"top-menu\"]/ul/li[3]/a'}}, '打开新建项目界面': {'点击': {'元素对象': '//*[@id=\"content\"]/div[1]/a'}}, '输入项目名称': {'发送数据': {'元素对象': '//*[@id=\"project_name\"]', '数据对象': 'qgnyt_var_test_project_01'}}, '输入标识': {'发送数据': {'元素对象': '//*[@id=\"project_identifier\"]', '数据对象': 'qgnyt_var_test_project'}}, '输入项目描述': {'发送数据': {'元素对象': '//*[@id=\"project_description\"]', '数据对象': 'test_project_01项目描述'}}, '创建': {'点击': {'元素对象': '//*[@id=\"new_project\"]/input[3]'}}, '断言元素是否可见': {'断言元素是否可见': {'元素对象': '//*[@id=\"flash_notice\"]'}}, '切换到管理模块界面': {'点击': {'元素对象': '//*[@id=\"top-menu\"]/ul/li[4]/a'}}, '进入到项目界面': {'点击': {'元素对象': '//*[@id=\"admin-menu\"]/ul/li[1]/a'}}, '断言文本是否在页面源码中': {'断言文本是否在页面源码中': {'数据对象': 'qgnyt_var_test_project_01'}}}}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "f28044a35589fe33.json",
+  "parameterValues" : [ "{'用例名称': '新建项目功能验证', '用例步骤': {'进入项目模块': {'点击': {'元素对象': '//*[@id=\"top-menu\"]/ul/li[3]/a'}}, '打开新建项目界面': {'点击': {'元素对象': '//*[@id=\"content\"]/div[1]/a'}}, '输入项目名称': {'发送数据': {'元素对象': '//*[@id=\"project_name\"]', '数据对象': 'qgnyt_var_test_project_01'}}, '输入标识': {'发送数据': {'元素对象': '//*[@id=\"project_identifier\"]', '数据对象': 'qgnyt_var_test_project'}}, '输入项目描述': {'发送数据': {'元素对象': '//*[@id=\"project_description\"]', '数据对象': 'test_project_01项目描述'}}, '创建': {'点击': {'元素对象': '//*[@id=\"new_project\"]/input[3]'}}, '断言元素是否可见': {'断言元素是否可见': {'元素对象': '//*[@id=\"flash_notice\"]'}}, '切换到管理模块界面': {'点击': {'元素对象': '//*[@id=\"top-menu\"]/ul/li[4]/a'}}, '进入到项目界面': {'点击': {'元素对象': '//*[@id=\"admin-menu\"]/ul/li[1]/a'}}, '断言文本是否在页面源码中': {'断言文本是否在页面源码中': {'数据对象': 'qgnyt_var_test_project_01'}}}}" ]
+}

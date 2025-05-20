@@ -1,0 +1,14 @@
+[
+  {
+    "name": "通过总数",
+    "matchedStatuses": ["passed"]
+  },
+  {
+    "name": "失败总数",
+    "matchedStatuses": ["failed"]
+  },
+  {
+    "name": "错误总数",
+    "matchedStatuses": ["broken"]
+  }
+]

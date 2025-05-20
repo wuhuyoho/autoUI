@@ -1,0 +1,21 @@
+Host:
+  host: http://127.0.0.1/redmine    # 自动化测试用环境地址
+  username: admin   # 测试用默认账号
+  passwd: 12345678  # 测试用默认密码
+
+Browser:
+  browser: Chrome    # 测试用浏览器，可设置为 Chrome\Firefox
+
+CaseLevel:    # 1：true,需要执行该级别的用例；0：false,不需要执行该级别的用例
+  L1: 0       # 冒烟用例，系统核心功能或主要功能用例
+  L2: 0       # 正向用例或主要功能用例，使用频率较高
+  L3: 0       # 反向用例或次要功能用例，使用频率较低
+  L4: 1       # 调试用用例，调试用例时，将case.yaml以L4作为名称开头，如L4_case.yaml
+
+SystemFilePath:
+  config.yaml: config.yaml          # 系统配置文件路径
+  logs: logs              # 日志文件存放路径
+  cases: cases_yaml       # 测试用例文件存放路径
+  cookie.yaml: cookie.yaml     # cookie文件存放路径
+  screenshots: screenshots      # 截图存放路径
+  environment.properties: environment.properties  # allure报告首页环境变量配置文件

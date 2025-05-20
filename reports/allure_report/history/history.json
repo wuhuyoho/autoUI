@@ -1,0 +1,42 @@
+{
+  "1ff1305a03f154c0bd4256242e0a4a63" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f28044a35589fe33",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location",
+      "time" : {
+        "start" : 1747741747330,
+        "stop" : 1747741747330,
+        "duration" : 0
+      }
+    } ]
+  },
+  "9c8c428aac4d755288a00fbea36f9732" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "fe6a3ca1d92375ba",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location",
+      "time" : {
+        "start" : 1747741745835,
+        "stop" : 1747741745835,
+        "duration" : 0
+      }
+    } ]
+  }
+}

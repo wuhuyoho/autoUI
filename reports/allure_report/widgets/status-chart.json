@@ -1,0 +1,21 @@
+[ {
+  "uid" : "fe6a3ca1d92375ba",
+  "name" : "test_查询项目[data0]",
+  "time" : {
+    "start" : 1747741745835,
+    "stop" : 1747741745835,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "f28044a35589fe33",
+  "name" : "test_新建项目功能验证[data0]",
+  "time" : {
+    "start" : 1747741747330,
+    "stop" : 1747741747330,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]

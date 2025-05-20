@@ -1,0 +1,38 @@
+用例名称: 新建项目功能验证
+用例描述: 新建项目流程功能
+用例等级: L4
+所属模块: 项目
+用例步骤:
+  进入项目模块:
+    点击:
+      元素对象: //*[@id="top-menu"]/ul/li[3]/a
+  打开新建项目界面:
+    点击:
+      元素对象: //*[@id="content"]/div[1]/a
+  输入项目名称:
+    发送数据:
+      元素对象: //*[@id="project_name"]
+      数据对象: $var_test_project_01$
+  输入标识:
+    发送数据:
+      元素对象: //*[@id="project_identifier"]
+      数据对象: $var_test_project
+  输入项目描述:
+    发送数据:
+      元素对象: //*[@id="project_description"]
+      数据对象: test_project_01项目描述
+  创建:
+    点击:
+      元素对象: //*[@id="new_project"]/input[3]
+  断言元素是否可见:
+    断言元素是否可见:
+      元素对象: //*[@id="flash_notice"]
+  切换到管理模块界面:
+    点击:
+      元素对象: //*[@id="top-menu"]/ul/li[4]/a
+  进入到项目界面:
+    点击:
+      元素对象: //*[@id="admin-menu"]/ul/li[1]/a
+  断言文本是否在页面源码中:
+    断言文本是否在页面源码中:
+      数据对象: $var_test_project_01$

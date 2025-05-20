@@ -1,0 +1,7 @@
+[ {
+  "values" : [ "http://127.0.0.1/redmine" ],
+  "name" : "baseUrl"
+}, {
+  "values" : [ "Chrome" ],
+  "name" : "Browser"
+} ]
